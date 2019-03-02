@@ -1,156 +1,123 @@
-@media screen and (max-width: 650px){
-  html body {
+html body {
     background-color: #fcc289;
-    height: 100%;
+    font-size: 62.5%;
+    /* height: 100%; */
   }
-  .wrapper {
-    display: grid;
-  }
-  .logoframe {
-    text-align: center;
-  }
-  #svg-container {
-    display: flex;
-    align-items: center;
-    background-color: red;
-    height: 100%;
-  }
-  #svglogo {
-    /*   fill:#F24C4C; */
-    margin: 0 auto;
-    display: block;
-  }
-  #svgcontainer :hover {
-    fill: #fcc289;
-  }
-  #header {
-    color: #fa4343;
-    text-transform: uppercase;
-    font-family: montserrat, san-serif;
-    line-height: 10%;
-    text-align: center;
-    /*   background-color:#FA4343; */
-  }
-  #bio {
-    color: #f24c4c;
-    font-family: "Laila", serif;
-    font-size:15px;
-    letter-spacing:0.1em;
-    text-align: justify;
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-  }
-  #biocontainer {
-    margin-left:auto;
-    margin-right:auto;
-  }
-  #tagline {
-    color: #fa4343;
-    text-transform: uppercase;
-    font-family: montserrat, san-serif;
-    text-align: center;
-  }
-  .portfoliowrapper > img {
-    max-height: 1em;
-    max-width: 1em;
-  }
-  .navigationgrid {
-    background-color: #f24c4c;
-    text-align: center;
-    color: #fcc289;
-    text-transform: uppercase;
-    font-family: montserrat, san-serif;
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: repeat(3, 1fr);
-    /*   margin-left:auto;
-    margin-right:auto; */
-  }
-  #navigationlinks {
-    display: grid;
-    color:#fcc289;
-    grid-template-rows: repeat(3, 1 fr);
-    grid-row-gap: 3px;
-  }
-  #navigationlinks > a {
-    color:#fff;
-  }
-  .brandname {
-    text-transform: uppercase;
-  }
-    }
-@media screen and (min-width: 650px) {
-  html body {
-    background-color: #fcc289;
-    height: 100%;
-  }
-  .wrapper {
-    display: flex-wrap;
-  }
-  .logoframe {
-    text-align: center;
-  }
-  #svg-container {
-    display: flex;
-    align-items: center;
-    background-color: red;
-    height: 100%;
-  }
-  #svglogo {
-    /*   fill:#F24C4C; */
-    margin: 0 auto;
-    display: block;
-  }
-  #svgcontainer :hover {
-    fill: #fcc289;
-  }
-  #header {
-    color: #fa4343;
-    text-transform: uppercase;
-    font-family: montserrat, san-serif;
-    line-height: 10%;
-    text-align: center;
-    /*   background-color:#FA4343; */
-  }
-  #bio {
-    color: #f24c4c;
-    font-family: "Laila", serif;
-    font-size:1em;
-    letter-spacing:0.1em;
-    text-align: justify;
-    display: grid;
-    grid-template-columns: 1fr 3fr 1fr;
-  }
-  #tagline {
-    color: #fa4343;
-    text-transform: uppercase;
-    font-family: montserrat, san-serif;
-    text-align: center;
-  }
-  .portfoliowrapper > img {
-    max-height: 1em;
-    max-width: 1em;
-  }
-  .navigationgrid {
-    background-color: #f24c4c;
-    text-align: center;
-    color: #fcc289;
-    text-transform: uppercase;
-    font-family: montserrat, san-serif;
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-columns: repeat(3, 1fr);
-    /*   margin-left:auto;
-    margin-right:auto; */
-  }
-  #navigationlinks {
-    display: grid;
-    /*   color:#fcc289; */
-    grid-template-rows: repeat(3, 1 fr);
-    grid-row-gap: 3px;
-  }
-  #navigationlinks > a {
-    color:#fff;
-  }
-  .brandname {
-    text-transform: uppercase;
-  }
+h1 {
+  font-size:7rem;
 }
+h4 {
+    color: #f24c4c;
+    font-size:5rem;
+    text-transform: uppercase;
+    font-family: montserrat, san-serif;
+  }
+p {
+    /* padding:2rem; */
+    margin:2rem;
+    font-size:4rem;
+  }
+h2 {
+    font-size:6rem;
+  }
+#maincontent {
+    height:100%;
+    width:100%;
+    display:grid;
+    /* margin:auto; */
+    /* background-color:#fcc289; */
+    grid-template-rows: auto auto;
+    grid-row-gap:0;
+    grid-template-areas:"header"
+                        "carousel";
+                      }
+.headercontainer {
+    display:subgrid;
+    grid-template-columns: 1ft 3ft 1ft;
+    grid-template-rows:repeat(4, 1fr);
+    grid-template-areas:". .svglogo . ."
+                        ". . brandname . ."
+                        ". . tagline . ."
+                         ". . bio . ." ;
+                       }
+#carouselcontainer {
+  /* height:100%;
+  width:100%; */
+  display:subgrid;
+  justify-items:center;
+  text-align:center;
+  grid-row-gap:5px;
+  grid-template-rows:repeat(8, 1fr);
+  grid-auto-rows: minmax(100px, auto);
+  grid-template-areas:"worktitle1"
+                      "photograph1"
+                      "worktitle2"
+                      "photograph2"
+                      "worktitle3"
+                      "photograph3"
+                      "worktitle4"
+                      "photograph4";
+}
+.griditem {
+    text-align:center;
+    padding:auto;
+    margin:auto;
+    }
+#svglogo {
+    grid-area:svglogo;
+  }
+#svglogo:hover {
+  fill: #fcc289;
+}
+#brandname {
+    color: #fa4343;
+    text-transform: uppercase;
+    font-family: montserrat, san-serif;
+    grid-area:brandname;
+  }
+#tag {
+    color: #fa4343;
+    /* font-size:8em; */
+    text-transform: uppercase;
+    font-family: montserrat, san-serif;
+    grid-area:tagline;
+  }
+#bio {
+    color: #f24c4c;
+    font-family: "Laila", serif;
+    letter-spacing:0.1em;
+    grid-area:bio;
+    /* grid-template-columns: 1fr 3fr 1fr; */}
+
+  }
+.work {
+  place-self:center;
+}
+
+article > img {
+  max-width:50rem;
+}
+/* #worktitle1{
+  grid-area:worktitle1;
+}
+#photograph1 {
+  grid-area:photograph1;
+}
+#worktitle2 {
+  grid-area:worktitle2;
+}
+#photograph2 {
+  grid-area:photograph2;
+}
+#worktitle3 {
+  grid-area:worktitle3;
+}
+#photograph3 {
+  grid-area:photograph3;
+}
+#worktitle4 {
+  grid-area:worktitle4;
+}
+#photograph4 {
+  grid-area:photograph4;
+} */
