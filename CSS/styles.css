@@ -3,23 +3,42 @@ html body {
     font-size: 62.5%;
     /* height: 100%; */
   }
+/* .navcontainer {
+  background-color: #fa4343;
+  display:inline;
+} */
+nav {
+  background-color: #fa4343;
+}
+.navcontainer {
+  list-style: none;
+  display:inline-block;
+}
+
+}
+li {
+  font-family:"Laila", serif;
+  font-size:1.5rem;
+  text-align:center;
+}
 h1 {
-  font-size:7rem;
+  font-size:2rem;
 }
 h4 {
     color: #f24c4c;
-    font-size:5rem;
+    font-size:1.3rem;
     text-transform: uppercase;
     font-family: montserrat, san-serif;
   }
+h2 {
+      font-size:1rem;
+    }
 p {
     /* padding:2rem; */
-    margin:2rem;
-    font-size:4rem;
+    /* margin:0.5rem; */
+    font-size:1rem;
   }
-h2 {
-    font-size:6rem;
-  }
+
 #maincontent {
     height:100%;
     width:100%;
@@ -27,13 +46,13 @@ h2 {
     /* margin:auto; */
     /* background-color:#fcc289; */
     grid-template-rows: auto auto;
-    grid-row-gap:0;
+    grid-row-gap:1rem;
     grid-template-areas:"header"
                         "carousel";
                       }
 .headercontainer {
     display:subgrid;
-    grid-template-columns: 1ft 3ft 1ft;
+    grid-template-columns: auto 3ft auto;
     grid-template-rows:repeat(4, 1fr);
     grid-template-areas:". .svglogo . ."
                         ". . brandname . ."
@@ -66,7 +85,7 @@ h2 {
 #svglogo {
     grid-area:svglogo;
   }
-#svglogo:hover {
+#logo :hover {
   fill: #fcc289;
 }
 #brandname {
@@ -93,31 +112,9 @@ h2 {
 .work {
   place-self:center;
 }
-
 article > img {
-  max-width:50rem;
+  margin:auto;
+  /* max-width:15rem; */
+  max-width: 100%;
+  height: auto;
 }
-/* #worktitle1{
-  grid-area:worktitle1;
-}
-#photograph1 {
-  grid-area:photograph1;
-}
-#worktitle2 {
-  grid-area:worktitle2;
-}
-#photograph2 {
-  grid-area:photograph2;
-}
-#worktitle3 {
-  grid-area:worktitle3;
-}
-#photograph3 {
-  grid-area:photograph3;
-}
-#worktitle4 {
-  grid-area:worktitle4;
-}
-#photograph4 {
-  grid-area:photograph4;
-} */
