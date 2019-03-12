@@ -11,7 +11,7 @@ h1, h2 {
   text-align:center;
 }
 svg {
-  fill:#f24c4c;
+  /* fill:#f24c4c; */
   max-width: 150px;
   max-height:auto;
 }
@@ -82,7 +82,7 @@ img, .card {
 @media screen and (min-width:1000px){
   html{
     font-size:84.4%
-    margin:0 auto;
+    margin:o auto;
   }
   .pagegrid {
     grid-template-columns:repeat(4,auto);
@@ -112,10 +112,10 @@ img, .card {
 .navbar {
   background-color: #f24c4c;
 }
-.foot > p {
+footer > p {
   color:#fcc289;
 }
-.foot {
+footer {
   grid-area:foot;
   background-color:#f24c4c;
 }
